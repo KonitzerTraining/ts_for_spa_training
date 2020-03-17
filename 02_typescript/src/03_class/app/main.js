@@ -20,6 +20,7 @@ var Product = /** @class */ (function () {
 }());
 var Bekleidung = /** @class */ (function (_super) {
     __extends(Bekleidung, _super);
+    // automatisch Eigenschaften
     function Bekleidung(size, title, price, brand) {
         var _this = _super.call(this, title, price) || this;
         _this.size = size;
@@ -35,6 +36,7 @@ var Bekleidung = /** @class */ (function (_super) {
         Object.seal(_this);
         return _this;
     }
+    // prototype.passtDas
     Bekleidung.prototype.passtDas = function (s) {
         return s === this.size;
     };

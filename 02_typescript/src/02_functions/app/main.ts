@@ -29,16 +29,18 @@ function multiply(x: number, y: number): number | never {
     return x * y;
 }
 
-multiply(234, 12);
+multiply(234, 123);
 
 // Funktionsdefinition mit Implementierung
 // Definitionsteil: (x: number) => number
 
-let fxBig: (x: number) => number = (y: number):number => {
+let fxBig: (x: number) => number; // Typ
+fxBig = (y: number):number => { // Implementierung
     return y * y;
 };
 
 // Kompakte Variante
+// Wenn nur eine Anweisung gibt und einen return
 let fx: (x: number) => number = (y: number):number => y * y;
 
 // noch kompakter

@@ -4,27 +4,30 @@ a = '234';
 
 // Explizite Typzuweisung mit :
 let b1: number;
-b1 = null;
+b1 = null; // typeof null => object
 b1 = undefined;
-b1 = 34;
+b1 = null;
 console.log(b1);
 
-let b2: any = 'egal';
+// Beliebig
+let b2: any = 'egal'; // Wie in EcmaScript
 
-let b3: null;
+let b3: null; // Wert als Typ
 b3 = null;
 b3 = undefined;
 
 // Oder
 let path: string | string[] = 'asdf';
-path = ['asdf'];
+console.log(path);
+path = ['asdf', 23];
+console.log(path);
 
 // Collection
 let list: Array<string> = ['234', 234];
 
 // Tuple
 let record: [number, string, string];
-record = [23, 'Hans', 'Berlin'];
+record = [23, 'Hans', 'Berlin', true];
 
 // Enum
 enum Sendung {
@@ -71,17 +74,30 @@ let c1: ICustomer = {
     }
 };
 
+let c2: ICustomer = {
+    id: 6,
+    name: 'Peter',
+};
+
 class Customer implements ICustomer {
     id: number  = null;
     name: string = null;
 }
-
+let c3: Customer;
+console.log(c3);
 // Typ-Casting (Typescript)
 // Hat keinen Einfluß auf JavaScript
 let jsonString = JSON.stringify({id: 5, name: 'Peter'});
+
+// zum Beispiel Rest-Antwort
 let data = JSON.parse(jsonString);
 // (data as Date).toLocaleString();
 
 console.log((data as ICustomer).name);
 
+type employee = IAddress;
+let e: employee = {
+    street: 'asdf',
+    zip: '93489'
+};
 

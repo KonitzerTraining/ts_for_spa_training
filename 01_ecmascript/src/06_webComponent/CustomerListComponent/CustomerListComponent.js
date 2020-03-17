@@ -1,6 +1,6 @@
 import HttpClient from "../lib/http-client.js";
 
-window.customElements.define('customer-list', class extends HTMLElement {
+customElements.define('customer-list', class extends HTMLElement {
     constructor(props) {
         super(props);
 
@@ -11,7 +11,7 @@ window.customElements.define('customer-list', class extends HTMLElement {
         this.http.get('http://localhost:3000/customers')
             .then(({length}) => {
                 this.innerHTML += `<p>Anzahl der Kunden: ${length}</p>`;
-            })
+            });
     }
 
 });

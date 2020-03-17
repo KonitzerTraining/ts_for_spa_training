@@ -24,13 +24,15 @@ function multiply(x, y) {
     }
     return x * y;
 }
-multiply(234, 12);
+multiply(234, 123);
 // Funktionsdefinition mit Implementierung
 // Definitionsteil: (x: number) => number
-var fxBig = function (y) {
+var fxBig; // Typ
+fxBig = function (y) {
     return y * y;
 };
 // Kompakte Variante
+// Wenn nur eine Anweisung gibt und einen return
 var fx = function (y) { return y * y; };
 // noch kompakter
 var fxCompact = function (y) { return y * y; };

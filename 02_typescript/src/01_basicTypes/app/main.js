@@ -3,22 +3,25 @@ var a = 234; // a soll nun number sein
 a = '234';
 // Explizite Typzuweisung mit :
 var b1;
-b1 = null;
+b1 = null; // typeof null => object
 b1 = undefined;
-b1 = 34;
+b1 = null;
 console.log(b1);
-var b2 = 'egal';
-var b3;
+// Beliebig
+var b2 = 'egal'; // Wie in EcmaScript
+var b3; // Wert als Typ
 b3 = null;
 b3 = undefined;
 // Oder
 var path = 'asdf';
-path = ['asdf'];
+console.log(path);
+path = ['asdf', 23];
+console.log(path);
 // Collection
 var list = ['234', 234];
 // Tuple
 var record;
-record = [23, 'Hans', 'Berlin'];
+record = [23, 'Hans', 'Berlin', true];
 // Enum
 var Sendung;
 (function (Sendung) {
@@ -40,6 +43,10 @@ var c1 = {
         zip: '24389'
     }
 };
+var c2 = {
+    id: 6,
+    name: 'Peter',
+};
 var Customer = /** @class */ (function () {
     function Customer() {
         this.id = null;
@@ -47,10 +54,17 @@ var Customer = /** @class */ (function () {
     }
     return Customer;
 }());
+var c3;
+console.log(c3);
 // Typ-Casting (Typescript)
 // Hat keinen Einfluß auf JavaScript
 var jsonString = JSON.stringify({ id: 5, name: 'Peter' });
+// zum Beispiel Rest-Antwort
 var data = JSON.parse(jsonString);
 // (data as Date).toLocaleString();
 console.log(data.name);
+var e = {
+    street: 'asdf',
+    zip: '93489'
+};
 //# sourceMappingURL=main.js.map

@@ -12,7 +12,7 @@ export default class CustomerList {
         Reflect.defineProperty(this, 'customers', {
             // Property Descriptor Map (Object.defineProperty())
             value: [],
-            // writable: true,
+            writable: true,
             enumerable: true,
             //configurable: false
         });
@@ -20,7 +20,7 @@ export default class CustomerList {
         this.httpClient = new HttpClient();
 
         // Absichern ES5
-        Object.freeze(this);
+        Object.seal(this);
     }
 
     loadCustomersWrong() {

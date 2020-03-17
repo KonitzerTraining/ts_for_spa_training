@@ -9,6 +9,8 @@ class Bekleidung extends Product {
     public static readonly info: string = 'Only for testing';
     private brand: string;
 
+    
+    // automatisch Eigenschaften
     constructor(public size: string, title: string, price: number, brand: string) {
         super(title, price);
         // Typüberprüfung zur Laufzeit fehlt
@@ -26,6 +28,7 @@ class Bekleidung extends Product {
         Object.seal(this);
     }
 
+    // prototype.passtDas
     public passtDas(s): boolean {
         return s === this.size;
     }
