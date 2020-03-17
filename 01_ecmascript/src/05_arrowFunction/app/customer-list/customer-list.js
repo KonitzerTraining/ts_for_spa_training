@@ -6,18 +6,21 @@ export default class CustomerList {
     constructor() {
         // ES3
         // this.customers = [];
+        this.info = 123;
 
         // ES6 Reflect API
         Reflect.defineProperty(this, 'customers', {
             // Property Descriptor Map (Object.defineProperty())
             value: [],
-            writable: true,
+            // writable: true,
             enumerable: true,
-            configurable: false
+            //configurable: false
         });
 
         this.httpClient = new HttpClient();
-        Object.seal(this);
+
+        // Absichern ES5
+        Object.freeze(this);
     }
 
     loadCustomersWrong() {

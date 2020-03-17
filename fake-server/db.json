@@ -1,0 +1,29 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hans",
+      "purchases": 0
+    },
+    {
+      "id": 2,
+      "name": "Peter",
+      "purchases": "50067"
+    },
+    {
+      "id": 3,
+      "name": "Hans-Peter",
+      "purchases": "2"
+    },
+    {
+      "id": 4,
+      "name": "John Doe",
+      "purchases": "58"
+    },
+    {
+      "id": 5,
+      "name": "Phillip Morris",
+      "purchases": 2984392
+    }
+  ]
+}

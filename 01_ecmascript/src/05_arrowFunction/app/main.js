@@ -21,3 +21,7 @@ customerList
 
 customerList.loadCustomersWrong();
 console.log(liveUrl, devUrl);
+
+customerList.info = 345;
+console.log(customerList.info);
+
